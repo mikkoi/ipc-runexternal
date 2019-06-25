@@ -1,0 +1,10 @@
+# Build files
+IPC-RunExternal-*
+.build
+
+# Plenv users
+.perl-version
+
+# The Vi/Vim temporary files
+*.swp
+
