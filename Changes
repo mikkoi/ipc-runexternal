@@ -8,6 +8,7 @@ Revision history for {{$dist->name}}
     - Change spelling of initialized to initialised (en_GB)
     - Assign Magic var $OUTPUT_AUTOFLUSH as local
     - no critic (Subroutines::ProhibitExcessComplexity)
+    - Fix critic (Objects::ProhibitIndirectSyntax)
 
 0.100     2019-07-05 11:35:04+02:00 Europe/Stockholm
     - Bump version number to 0.100 because 0.010 is less than 0.09.

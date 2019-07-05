@@ -267,9 +267,9 @@ sub runexternal { ## no critic (Subroutines::ProhibitExcessComplexity)
         if($eval_ok) {
             print $infh $input;
             close $infh;
-            my $sel = new IO::Select; # create a select object to notify
-                                      # us on reads on our FHs
-            $sel->add($outfh,$errfh); # add the FHs we're interested in
+            my $sel = IO::Select->new(); # create a select object to notify
+                                         # us on reads on our FHs
+            $sel->add($outfh, $errfh);   # add the FHs we're interested in
             my $out_handles_open = 2;
             for(my $slept_secs = -1; $out_handles_open > 0 && $slept_secs < $timeout; $slept_secs++) {
                 while(my @ready = $sel->can_read(1)) { # read ready, timeout after 1 second.
