@@ -1,6 +1,7 @@
 ## no critic (Documentation::RequirePodAtEnd)
 ## no critic (Documentation::RequirePodSections)
 ## no critic (ControlStructures::ProhibitDeepNests)
+## no critic (ValuesAndExpressions::ProhibitMagicNumbers)
 
 package IPC::RunExternal;
 
