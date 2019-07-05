@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Bump version number to 0.100 because 0.010 is less than 0.09.
+        Obvious, really!
 
 0.010     2019-07-05 11:28:37+02:00 Europe/Stockholm 
     - Modernize repository. Use Dist::Zilla. Put repo to GitHub.
