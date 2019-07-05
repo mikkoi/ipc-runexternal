@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
-{{$NEXT}} 
+{{$NEXT}}
+
+0.010     2019-07-05 11:28:37+02:00 Europe/Stockholm 
     - Modernize repository. Use Dist::Zilla. Put repo to GitHub.
 
 0.09    2013-Jun-27
