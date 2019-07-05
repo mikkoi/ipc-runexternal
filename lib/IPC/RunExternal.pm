@@ -302,7 +302,7 @@ sub runexternal { ## no critic (Subroutines::ProhibitExcessComplexity)
                     print STDOUT $progress_indicator_char;
                 }
                 if($execute_every_second && $out_handles_open > 0) {
-                    &$execute_every_second($slept_secs);
+                    &{$execute_every_second}($slept_secs);
                 }
             }
             # It is safe to kill in all circumstances.
