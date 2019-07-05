@@ -194,7 +194,7 @@ Run an external (operating system) command.
 
 =cut
 
-sub runexternal {
+sub runexternal { ## no critic (Subroutines::ProhibitExcessComplexity)
 
     # Parameters
     my ($command, $input, $timeout, $parameter_tags) = @_;
