@@ -27,7 +27,7 @@ This package is currently being developed so changes in the API and functionalit
     use IPC::RunExternal;
 
     my $external_command = 'ls -r /'; # Any normal Shell command line
-    my $stdin = q{}; # STDIN for the command. Must be an initialized string, e.g. q{}.
+    my $stdin = q{}; # STDIN for the command. Must be an initialised string, e.g. q{}.
     my $timeout = 60; # Maximum number of seconds before forced termination.
     my %parameter_tags = (print_progress_indicator => 1);
     # Parameter tags:
@@ -147,7 +147,7 @@ Run an external (operating system) command.
 
 =item 1. command, a system executable.
 
-=item 2. input (STDIN), for the command, must be an initialized string,
+=item 2. input (STDIN), for the command, must be an initialised string,
     if no input, string should be empty.
 
 =item 3. timeout, 0 (no timeout) or greater.
@@ -200,10 +200,10 @@ sub runexternal {
     my ($command, $input, $timeout, $parameter_tags) = @_;
 
     if(!defined $command) {
-        croak('Parameter \'command\' is not initialized!');
+        croak('Parameter \'command\' is not initialised!');
     }
     if(!defined $input) {
-        croak('Parameter \'input\' is not initialized!');
+        croak('Parameter \'input\' is not initialised!');
     }
     if($timeout < 0) {
         croak('Parameter \'timeout\' is not valid!');
