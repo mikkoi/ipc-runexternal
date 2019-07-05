@@ -9,6 +9,7 @@ Revision history for {{$dist->name}}
     - Assign Magic var $OUTPUT_AUTOFLUSH as local
     - no critic (Subroutines::ProhibitExcessComplexity)
     - Fix critic (Objects::ProhibitIndirectSyntax)
+    - no critic (ControlStructures::ProhibitCStyleForLoops)
 
 0.100     2019-07-05 11:35:04+02:00 Europe/Stockholm
     - Bump version number to 0.100 because 0.010 is less than 0.09.

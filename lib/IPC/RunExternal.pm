@@ -271,6 +271,7 @@ sub runexternal { ## no critic (Subroutines::ProhibitExcessComplexity)
                                          # us on reads on our FHs
             $sel->add($outfh, $errfh);   # add the FHs we're interested in
             my $out_handles_open = 2;
+            ## no critic (ControlStructures::ProhibitCStyleForLoops)
             for(my $slept_secs = -1; $out_handles_open > 0 && $slept_secs < $timeout; $slept_secs++) {
                 while(my @ready = $sel->can_read(1)) { # read ready, timeout after 1 second.
                     foreach my $fh (@ready) {
