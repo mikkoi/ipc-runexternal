@@ -96,16 +96,10 @@ use IPC::Open3;
 use IO::Select; # for select
 use Symbol 'gensym'; # for gensym
 
-BEGIN {
-    use Exporter ();
-    our ($VERSION, @ISA, @EXPORT, @EXPORT_OK, %EXPORT_TAGS);
-
-    @ISA         = qw(Exporter DynaLoader);
-    @EXPORT      = qw(runexternal);
-    %EXPORT_TAGS = ( );     # eg: TAG => [ qw!name1 name2! ],
-    @EXPORT_OK   = qw(runexternal);
-}
-our @EXPORT_OK;
+use Exporter 'import';
+our @EXPORT_OK   = qw(runexternal);
+our @EXPORT      = qw(runexternal); ## no critic (Modules::ProhibitAutomaticExportation)
+our %EXPORT_TAGS = ( all => [ qw(runexternal) ] );
 
 # CONSTANTS for this module
 my $TRUE = 1;
