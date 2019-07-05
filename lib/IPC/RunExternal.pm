@@ -248,7 +248,7 @@ sub runexternal {
             && $timeout >= 0
     )
     {
-        $OUTPUT_AUTOFLUSH = $TRUE; # Equals to var $|. Flushes always after writing.
+        local $OUTPUT_AUTOFLUSH = $TRUE; # Equals to var $|. Flushes always after writing.
         my ($infh,$outfh,$errfh); # these are the FHs for our child
         $errfh = gensym(); # we create a symbol for the errfh
                            # because open3 will not do that for us
