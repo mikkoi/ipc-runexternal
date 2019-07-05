@@ -299,7 +299,7 @@ sub runexternal { ## no critic (Subroutines::ProhibitExcessComplexity)
                     $slept_secs--;
                 }
                 if($print_progress_indicator == $TRUE && $out_handles_open > 0) {
-                    print STDOUT $progress_indicator_char;
+                    print {*STDOUT} $progress_indicator_char;
                 }
                 if($execute_every_second && $out_handles_open > 0) {
                     &{$execute_every_second}($slept_secs);
