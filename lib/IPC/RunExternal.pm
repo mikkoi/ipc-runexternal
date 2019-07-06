@@ -1,4 +1,3 @@
-## no critic (Documentation::RequirePodAtEnd)
 ## no critic (Documentation::RequirePodSections)
 ## no critic (ControlStructures::ProhibitDeepNests)
 ## no critic (ValuesAndExpressions::ProhibitMagicNumbers)
@@ -15,13 +14,11 @@ use 5.010000;
 
 =pod
 
+=for stopwords API mailmap Readonly committer undef committers MSWin Unices OpenVMS runexternal
+
+=for stopwords Mikko Koivunalho
+
 =encoding utf8
-
-=for stopwords API mailmap Readonly committer undef committers backticks STDIN STDOUT STDERR MSWin Unices OpenVMS runexternal
-
-=head1 STATUS
-
-This package is currently being developed so changes in the API and functionality are possible.
 
 =head1 SYNOPSIS
 
@@ -61,15 +58,29 @@ This package is currently being developed so changes in the API and functionalit
 =head1 DESCRIPTION
 
 IPC::RunExternal is for executing external operating system programs
-more conveniently that with `` (backticks) or exec/system, and without all the hassle of IPC::Open3.
+more conveniently than with C<``> or C<system()>,
+and without all the hassle of IPC::Open3.
 
 IPC::RunExternal allows:
-1) Capture STDOUT and STDERR in scalar variables.
-2) Capture both STDOUT and STDERR in one scalar variable, in the correct order.
-3) Use timeout to break the execution of a program running too long.
-4) Keep user happy by printing something (e.g. '.' or '#') every second.
-5) Not happy with simply printing something? Then execute your own code (function) at every second while the program is running.
 
+=over 8
+
+=item 1) Capture F<stdout> and F<stderr> in scalar variables.
+
+=item 2) Capture both F<stdout> and F<stderr> in one scalar variable, in the correct order.
+
+=item 3) Use timeout to break the execution of a program running too long.
+
+=item 4) Keep user happy by printing something (e.g. '.' or '#') every second.
+
+=item 5) Not happy with simply printing something? Then execute your own code (function) at every second while the program is running.
+
+=back
+
+
+=head1 STATUS
+
+This package is currently being developed so changes in the API and functionality are possible.
 
 =head1 DEPENDENCIES
 
@@ -144,7 +155,7 @@ Run an external (operating system) command.
 
 =item 1. command, a system executable.
 
-=item 2. input (STDIN), for the command, must be an initialised string,
+=item 2. input (F<stdin>), for the command, must be an initialised string,
     if no input, string should be empty.
 
 =item 3. timeout, 0 (no timeout) or greater.

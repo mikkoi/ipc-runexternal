@@ -46,3 +46,9 @@ exclude  = Modules::RequireVersionVar
 [Documentation::RequirePodSections]
 language = en_US
 
+[Documentation::PodSpelling]
+# spell_command = aspell list
+stopwords = API mailmap Readonly committer undef committers MSWin Unices OpenVMS runexternal backticks STDIN STDOUT STDERR Mikko Koivunalho
+# stop_words = gibbles foobar
+# stop_words_file = some/path/with/stop/words.txt
+
