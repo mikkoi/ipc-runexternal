@@ -101,6 +101,8 @@ our @EXPORT_OK   = qw(runexternal);
 our @EXPORT      = qw(runexternal); ## no critic (Modules::ProhibitAutomaticExportation)
 our %EXPORT_TAGS = ( all => [ qw(runexternal) ] );
 
+use autodie;
+
 # CONSTANTS for this module
 my $TRUE = 1;
 my $FALSE = 0;
