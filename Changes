@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.101     2019-07-06 02:30:28+02:00 Europe/Stockholm
     - Change author to mikkoi@cpan.org
     - Fix dist.ini, remove needless quotation marks
     - Devel::AssertOS included again in distro, in subdir inc
