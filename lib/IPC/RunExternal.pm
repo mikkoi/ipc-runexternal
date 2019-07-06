@@ -260,7 +260,7 @@ sub runexternal { ## no critic (Subroutines::ProhibitExcessComplexity)
             $eval_ok = 0;
         };
         if($eval_ok) {
-            print $infh $input;
+            print {$infh} $input; ## no critic (InputOutput::RequireCheckedSyscalls)
             close $infh;
             my $sel = IO::Select->new(); # create a select object to notify
                                          # us on reads on our FHs
@@ -293,7 +293,7 @@ sub runexternal { ## no critic (Subroutines::ProhibitExcessComplexity)
                     $slept_secs--;
                 }
                 if($print_progress_indicator == $TRUE && $out_handles_open > 0) {
-                    print {*STDOUT} $progress_indicator_char;
+                    print {*STDOUT} $progress_indicator_char; ## no critic (InputOutput::RequireCheckedSyscalls)
                 }
                 if($execute_every_second && $out_handles_open > 0) {
                     &{$execute_every_second}($slept_secs);
