@@ -1,4 +1,3 @@
-## no critic (Documentation::RequirePodSections)
 ## no critic (ControlStructures::ProhibitDeepNests)
 ## no critic (ValuesAndExpressions::ProhibitMagicNumbers)
 
@@ -85,18 +84,6 @@ This package is currently being developed so changes in the API and functionalit
 =head1 DEPENDENCIES
 
 Requires Perl version 5.6.2.
-
-Requires the following modules:
-
-=over 4
-
-English
-Carp
-IPC::Open3;
-IO::Select
-Symbol
-
-=back
 
 
 =cut
@@ -197,6 +184,18 @@ Run an external (operating system) command.
 =item 4. $output_all: $output_std and $output_error mixed in order of occurrence.
 
 =back
+
+=back
+
+=head1 SEE ALSO
+
+=over 8
+
+=item L<IPC::Run>
+
+=item L<System::Command>
+
+=item L<IPC::Open3>
 
 =back
 
