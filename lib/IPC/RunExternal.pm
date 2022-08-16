@@ -314,7 +314,8 @@ sub runexternal { ## no critic (Subroutines::ProhibitExcessComplexity)
             # It is safe to kill in all circumstances.
             # Anyway, we must reap the child process.
             my $killed = kill $SIGKILL, $pid;
-            my $command_return_status = $CHILD_ERROR >> 8;
+            # Will not return anyway.
+            # my $command_return_status = $CHILD_ERROR >> 8;
             if($out_handles_open > 0) {
                 $output_error .= 'Timeout';
                 $output_all .= 'Timeout';
