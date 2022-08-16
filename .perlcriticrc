@@ -36,12 +36,12 @@ top       = 1000
 # Allow the use of Policies that are marked as "unsafe" by the author. Zero or One
 allow-unsafe = 0
 
-verbose  = 4
-exclude  = RegularExpressions::RequireExtendedFormatting
-exclude  = Modules::RequireVersionVar
-exclude  = Documentation
-exclude  = Subroutines::RequireArgUnpacking
-exclude  = Modules::RequireVersionVar
+# exclude  = RegularExpressions::RequireExtendedFormatting
+# exclude  = Modules::RequireVersionVar
+# exclude  = Documentation
+# exclude  = Subroutines::RequireArgUnpacking
+# exclude  = Modules::RequireVersionVar
+exclude = Modules::RequireVersionVar Documentation CodeLayout::RequireTidyCode
 
 [Documentation::RequirePodSections]
 language = en_US
