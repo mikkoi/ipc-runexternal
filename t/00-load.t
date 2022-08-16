@@ -34,8 +34,8 @@ my $stdout = $EMPTY_STR;
 my $stderr = $EMPTY_STR;
 my $allout = $EMPTY_STR;
 
-	local $ENV{'PATH'} = q{}; # Testing in tainted mode (-T)
-	local $ENV{'ENV'} = q{}; # Testing in tainted mode (-T)
+	# local $ENV{'PATH'} = q{}; # Testing in tainted mode (-T)
+	# local $ENV{'ENV'} = q{}; # Testing in tainted mode (-T)
 	# Running these tests requires Test::Exception, not supported!
 	#isnt(runexternal(undef, $EMPTY_STR, 3), -1, "Invalid parameter causes failure (command)");
 	#isnt(runexternal('date', 1, 3), -1, "Invalid parameter causes failure (input 1)");
@@ -75,8 +75,8 @@ subtest '/usr/bin/wc' => sub {
 };
 
 subtest 'TestRunExternal_01 loop 4 simple' => sub {
-	local $ENV{'PATH'} = q{}; # Testing in tainted mode (-T)
-	local $ENV{'ENV'} = q{}; # Testing in tainted mode (-T)
+	# local $ENV{'PATH'} = q{}; # Testing in tainted mode (-T)
+	# local $ENV{'ENV'} = q{}; # Testing in tainted mode (-T)
 	($exit_code, $stdout, $stderr, $allout) = runexternal('t/TestRunExternal_01.pl loop 2 simple', $EMPTY_STR, $TIMEOUT_3_SECS);
 	is($exit_code, $EXIT_STATUS_OK,                                 'TestRunExternal_01.pl 2 simple result (1)');
 	like($stdout, '/STDOUT:2/',          'TestRunExternal_01.pl 2 simple result (2)');
@@ -87,8 +87,8 @@ subtest 'TestRunExternal_01 loop 4 simple' => sub {
 };
 
 subtest 'TestRunExternal_01 loop 10' => sub {
-	local $ENV{'PATH'} = q{}; # Testing in tainted mode (-T)
-	local $ENV{'ENV'} = q{}; # Testing in tainted mode (-T)
+	# local $ENV{'PATH'} = q{}; # Testing in tainted mode (-T)
+	# local $ENV{'ENV'} = q{}; # Testing in tainted mode (-T)
 	($exit_code, $stdout, $stderr, $allout) = runexternal('t/TestRunExternal_01.pl loop 10', $EMPTY_STR, $TIMEOUT_3_SECS);
 	is($exit_code, $EXIT_STATUS_TIMEOUT,                                 'TestRunExternal_01.pl Timeout result (1)');
 	#like($stdout, '/.*This program is part of IPC::RunExternal package test suite.*/',          "TestRunExternal_01.pl Timeout result (2)");
@@ -100,8 +100,8 @@ subtest 'TestRunExternal_01 loop 10' => sub {
 };
 
 subtest 'TestRunExternal_01 loop 4 simple' => sub {
-	local $ENV{'PATH'} = q{}; # Testing in tainted mode (-T)
-	local $ENV{'ENV'} = q{}; # Testing in tainted mode (-T)
+	# local $ENV{'PATH'} = q{}; # Testing in tainted mode (-T)
+	# local $ENV{'ENV'} = q{}; # Testing in tainted mode (-T)
 	($exit_code, $stdout, $stderr, $allout) = runexternal('t/TestRunExternal_01.pl loop 4 simple', $EMPTY_STR, $TIMEOUT_0_SECS,
 			{ #print_progress_indicator => $TRUE
 			});
@@ -113,8 +113,8 @@ subtest 'TestRunExternal_01 loop 4 simple' => sub {
 };
 
 subtest 'TestRunExternal_01 loop 6' => sub {
-	local $ENV{'PATH'} = q{}; # Testing in tainted mode (-T)
-	local $ENV{'ENV'} = q{}; # Testing in tainted mode (-T)
+	# local $ENV{'PATH'} = q{}; # Testing in tainted mode (-T)
+	# local $ENV{'ENV'} = q{}; # Testing in tainted mode (-T)
 	($exit_code, $stdout, $stderr, $allout) = runexternal('t/TestRunExternal_01.pl loop 6', $EMPTY_STR, $TIMEOUT_1_SECS,
 			{ #print_progress_indicator => $TRUE,
 				progress_indicator_char => q{#}
