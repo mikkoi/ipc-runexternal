@@ -68,7 +68,7 @@ subtest '/usr/bin/wc' => sub {
 	($exit_code, $stdout, $stderr, $allout) = runexternal('/usr/bin/wc', 'QWERT', 2);
 	is($exit_code, $EXIT_STATUS_OK,                   'Wc Test result (1)');
 	#like($stdout, '/.*0.*1.*5.*/',          "Wc Test result (2)");
-	like($stdout, '/      0       1       5/',          'Wc Test result (2)'); # Better a regexp. BSD Unix returns an extra prefix whitespace.
+	like($stdout, qr/ 0 [[:space:]]{0,} 1 [[:space:]]{0,} 5 /msx,          'Wc Test result (2)'); # Better a regexp. BSD Unix returns an extra prefix whitespace.
 	#is($stdout, "      0       1       5\n",          "Wc Test result (2)");
 	is($stderr, q{},                                   'Wc Test result (3)');
     done_testing();
